@@ -19,29 +19,31 @@
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
     <Compile Remove="ClientApp\src\app\app-table\**" />
+    <Compile Remove="ClientApp\src\app\classes\**" />
     <Compile Remove="ClientApp\src\app\table\**" />
     <Content Remove="$(SpaRoot)**" />
     <Content Remove="ClientApp\src\app\app-table\**" />
+    <Content Remove="ClientApp\src\app\classes\**" />
     <Content Remove="ClientApp\src\app\table\**" />
     <EmbeddedResource Remove="ClientApp\src\app\app-table\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\classes\**" />
     <EmbeddedResource Remove="ClientApp\src\app\table\**" />
     <None Remove="$(SpaRoot)**" />
     <None Remove="ClientApp\src\app\app-table\**" />
+    <None Remove="ClientApp\src\app\classes\**" />
     <None Remove="ClientApp\src\app\table\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="ClientApp\src\app\classes\columns.ts" />
+    <None Remove="ClientApp\src\app\classes\column.ts" />
+    <None Remove="ClientApp\src\app\classes\file.tsx" />
     <None Remove="ClientApp\src\app\models\mapData.ts" />
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\classes\column.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\models\mapData.ts" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ClientApp\src\app\classes\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

@@ -19,6 +19,7 @@ import { PlaceholderTableComponent } from './placeholder-table/placeholder-table
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { MatSortModule } from '@angular/material/sort';
     MatListModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+      MatSortModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

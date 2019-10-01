@@ -21,3 +21,10 @@
 span {
   padding-right: 1rem;
 }
+.main-nav {
+  margin-bottom: 25px;
+}
+.mat-card{
+  background-color: rgb(3, 169, 244);
+  
+}
