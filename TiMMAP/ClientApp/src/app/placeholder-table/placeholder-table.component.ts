@@ -5,6 +5,7 @@ import { MatTable } from '@angular/material/table';
 import { PlaceholderTableDataSource, PlaceholderTableItem } from './placeholder-table-datasource';
 import { Column } from '../classes/column';
 import { ColumnsComponent } from '../columns/columns.component';
+import { mapData } from '../models/mapData';
 
 @Component({
   selector: 'app-placeholder-table',
@@ -15,19 +16,22 @@ export class PlaceholderTableComponent implements AfterViewInit, OnInit {
   @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: false}) sort: MatSort;
   @ViewChild(MatTable, { static: false }) table: MatTable<PlaceholderTableItem>;
-  @ViewChild(ColumnsComponent, { static: false }) columns: ColumnsComponent;
+  @ViewChild(ColumnsComponent, { static: false }) arr: ColumnsComponent;
   dataSource: PlaceholderTableDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['id','project', 'crewmember', 'pending', 'i9', 'gk','pa','ps','au','up','lp','st','sp','ss','at'];
 
   ngOnInit() {
-    this.dataSource = new PlaceholderTableDataSource();
+      this.dataSource = new PlaceholderTableDataSource();
+      
+     
   }
 
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
-    this.table.dataSource = this.dataSource;
+      this.table.dataSource = this.dataSource;
+      console.log(this.dataSource);
   }
 }

@@ -50,7 +50,7 @@ import { MatCardModule } from '@angular/material/card';
     MatListModule,
     MatTableModule,
     MatPaginatorModule,
-      MatSortModule,
+    MatSortModule,
     MatCardModule
   ],
   providers: [],

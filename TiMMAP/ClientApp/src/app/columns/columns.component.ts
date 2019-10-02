@@ -46,6 +46,7 @@ export class ColumnsComponent implements OnInit {
       });
    //filter array to get rid of duplicates
       arr = columns.filter((t = {}, a => !(t[a] = a in t)));
+      console.log(arr);
       return arr;
   }
 }
