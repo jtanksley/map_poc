@@ -32,6 +32,6 @@ export class PlaceholderTableComponent implements AfterViewInit, OnInit {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
       this.table.dataSource = this.dataSource;
-      console.log(this.dataSource);
+      this.displayedColumns = columnsArr();
   }
 }
