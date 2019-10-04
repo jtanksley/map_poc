@@ -8,7 +8,7 @@ import { mapData } from '../models/mapData';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
-    @ViewChild(ColumnsComponent, { static: false }) columns: ColumnsComponent;
+    //@ViewChild(ColumnsComponent, { static: false }) columns: ColumnsComponent;
     public gridData: any[] = mapData;
     //public columns:  ColumnsComponent;
   constructor() { }
