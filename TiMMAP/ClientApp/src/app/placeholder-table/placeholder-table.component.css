@@ -1,3 +1,117 @@
 .full-width-table {
   width: 100%;
 }
+.hd_default {
+  background-color: #f1f1f1 /*rgba(240, 240, 240, 0.8)*/;
+  color: rgb(0, 0, 0);
+}
+.hd_i9 {
+  background-color: rgb(227, 30, 30);
+  color: rgb(255, 255, 255);
+}
+
+.hd_everify {
+  background-color: rgb(227, 30, 30);
+  color: rgb(255, 255, 255);
+}
+
+.hd_payroll_accountant {
+  background-color: rgb(240, 240,0);
+  color: rgb(0, 0, 0);
+}
+
+td.hd_payroll_accountant {
+  background-color: rgba(240, 240,0, 0.2);
+  color: rgb(0, 0, 0);
+}
+
+.hd_production_accountant {
+  background-color: rgb(118, 238, 30);
+  color: rgb(0, 0, 0);
+}
+
+td.hd_production_accountant {
+  background-color: rgba(118, 238, 30, 0.2);
+  color: rgb(0, 0, 0);
+}
+
+.hd_production_supervisor {
+  background-color: rgb(198, 179, 255);
+  color: rgb(0, 0, 0);
+}
+
+td.hd_production_supervisor {
+  background-color: rgba(198, 179, 255,0.2);
+  color: rgb(0, 0, 0);
+}
+
+.hd_aupm {
+  background-color: rgb(255, 192, 203);
+  color: rgb(0, 0, 0);
+}
+
+td.hd_aupm {
+  background-color: rgba(255, 192, 203, 0.2);
+  color: rgb(0, 0, 0);
+}
+
+.hd_upm {
+  background-color: rgb(37, 232, 242);
+  color: rgb(0, 0, 0);
+}
+
+td.hd_upm {
+  background-color: rgba(37, 232, 242,0.2);
+  color: rgb(0, 0, 0);
+}
+
+.hd_line_producer {
+  background-color: rgb(255, 179, 102);
+  color: rgb(0, 0, 0);
+}
+
+td.hd_line_producer {
+  background-color: rgba(255, 179, 102,0.2);
+  color: rgb(0, 0, 0);
+}
+
+.hd_studio {
+  background-color: rgb(102, 179, 255);
+  color: rgb(255, 255, 255);
+}
+
+td.hd_studio {
+  background-color: rgba(102, 179, 255, 0.2);
+  color: rgb(0, 0, 0);
+}
+
+.hd_sent_to_payroll {
+  background-color: rgb(255, 128, 0);
+  color: rgb(255, 255, 255);
+}
+
+td.hd_sent_to_payroll {
+  background-color: rgba(255, 128, 0,0.2);
+  color: rgb(0, 0, 0);
+}
+
+.hd_sent_to_studio {
+  background-color: rgb(26, 140, 255);
+  color: rgb(255, 255, 255);
+}
+
+td.hd_sent_to_studio {
+  background-color: rgba(26, 140, 255,0.2);
+  color: rgb(0, 0, 0);
+}
+
+td.hd_attachments {
+  color: #999;
+  font-style: italic;
+  font-size: .85em;
+}
+
+  td.hd_attachments a {
+    font-style: normal;
+    text-decoration: underline;
+  }
