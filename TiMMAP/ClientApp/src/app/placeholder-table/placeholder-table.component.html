@@ -1,78 +1,53 @@
 
-<div class="mat-elevation-z8">
-  <table mat-table fxFlex="100%" class="full-width-table" matSort aria-label="Elements">
+<div class="table-container mat-elevation-z8">
+  <table mat-table class="full-width-table" matSort aria-label="Elements">
     <!-- Id Column -->
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef mat-sort-header class="hd_default">Selection</th>
-      <td mat-cell *matCellDef="let row">{{row.ToDo}}</td>
+      <td mat-cell *matCellDef="let row" class="text-center">{{row.ToDo}}</td>
     </ng-container>
 
     <!-- Name Column -->
     <ng-container matColumnDef="project">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="hd_default">Project</th>
-      <td mat-cell *matCellDef="let row">{{row.ProductionName}}</td>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="hd_default" colspan="2">Project</th>
+      <td mat-cell *matCellDef="let row" colspan="2"><a href="#">{{row.ProductionName}}</a></td>
     </ng-container>
     <ng-container matColumnDef="crewmember">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="hd_default">Crewmember</th>
-      <td mat-cell *matCellDef="let row">{{row.FirstName}} &nbsp; {{row.LastName}}<br/>{{row.Position}}<br/>{{row.StartworkType}}</td>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="hd_default" colspan="2">Crewmember</th>
+      <td mat-cell *matCellDef="let row" colspan="2"><span class="break">{{row.FirstName}}&nbsp; {{row.LastName}}</span><br /><span class="position_name">{{row.Position}}</span><br /><span class="startwork_name">{{row.StartworkType}}</span></td>
     </ng-container>
-    <ng-container matColumnDef="pending" >
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="hd_default">Pending My Review</th>
-      <td mat-cell *matCellDef="let row">placeholder</td>
+    <ng-container matColumnDef="pending">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="hd_default text-center"><span class="text-center">Pending <br />My<br /> Review</span></th>
+      <td mat-cell *matCellDef="let row" class="text-center">placeholder</td>
     </ng-container>
     <ng-container matColumnDef="i9">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="hd_i9">Verify I-9</th>
-      <td mat-cell *matCellDef="let row">{{row.I9VerifyValue}}</td>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="hd_i9 text-center"><span>I-9<br/>Verified<br/></span></th>
+      <td mat-cell *matCellDef="let row" class="text-center">{{row.I9VerifyValue}}</td>
     </ng-container>
     <ng-container matColumnDef="gk">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="hd_payroll_accountant">Gatekeeper</th>
-      <td mat-cell *matCellDef="let row">{{row.ApprovalPayrollAccountantValue}}</td>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="hd_payroll_accountant text-center"><span>Gate<br/>Keeper<br/></span></th>
+      <td mat-cell *matCellDef="let row" class="text-center">{{row.ApprovalPayrollAccountantValue}}</td>
     </ng-container>
-    <ng-container matColumnDef="pa">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="hd_production_accountant">Prod. Acct.</th>
-      <td mat-cell *matCellDef="let row">{{row.ApprovalProductionAccountantValue}}</td>
-    </ng-container>
-    <ng-container matColumnDef="ps">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="hd_production_supervisor">Prod. Sup</th>
-      <td mat-cell *matCellDef="let row">{{row.ApprovalProductionSupervisorValue}}</td>
-    </ng-container>
-    <ng-container matColumnDef="au">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="hd_aupm">AUPM</th>
-      <td mat-cell *matCellDef="let row">{{row.ApprovalAupmValue}}</td>
-    </ng-container>
-    <ng-container matColumnDef="up">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="hd_upm">UPM</th>
-      <td mat-cell *matCellDef="let row">{{row.ApprovalUpmValue}}</td>
-    </ng-container>
-    <ng-container matColumnDef="lp">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="hd_line_producer">Line Prod.</th>
-      <td mat-cell *matCellDef="let row">{{row.ApprovalLineProducerValue}}</td>
-    </ng-container>
-    <ng-container matColumnDef="st">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="hd_studio">Studio</th>
-      <td mat-cell *matCellDef="let row">{{row.ApprovalStudioValue}}</td>
-    </ng-container>
+
     <ng-container matColumnDef="sp">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="hd_sent_to_payroll">Sent to Payroll</th>
-      <td mat-cell *matCellDef="let row">{{row.SentToPayrollShort}}</td>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="hd_sent_to_payroll text-center"><span>Sent<br />to<br/>Payroll</span></th>
+      <td mat-cell *matCellDef="let row" class="text-center">{{row.SentToPayrollShort}}</td>
     </ng-container>
     <ng-container matColumnDef="ss">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="hd_sent_to_studio">Sent to Studio</th>
-      <td mat-cell *matCellDef="let row">{{row.SentToStudioShort}}</td>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="hd_sent_to_studio text-center"><span>Sent<br/>to<br/>Studio</span></th>
+      <td mat-cell *matCellDef="let row" class="text-center">{{row.SentToStudioShort}}</td>
     </ng-container>
     <ng-container matColumnDef="at">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="hd_default">Attachments</th>
-      <td mat-cell *matCellDef="let row">{{row.Attachments}}</td>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="hd_default"><span>Attachments</span></th>
+      <td mat-cell *matCellDef="let row" class="text-center">{{row.Attachments}}</td>
     </ng-container>
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky:true"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-
-  <mat-paginator #paginator
-      [length]="dataSource?.data.length"
-      [pageIndex]="0"
-      [pageSize]="50"
-      [pageSizeOptions]="[25, 50, 100, 250]">
-  </mat-paginator>
 </div>
- 
+<mat-paginator #paginator
+               [length]="dataSource?.data.length"
+               [pageIndex]="0"
+               [pageSize]="50"
+               [pageSizeOptions]="[25, 50, 100, 250]">
+</mat-paginator>

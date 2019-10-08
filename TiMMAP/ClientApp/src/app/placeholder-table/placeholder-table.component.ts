@@ -16,11 +16,11 @@ export class PlaceholderTableComponent implements AfterViewInit, OnInit {
   @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: false}) sort: MatSort;
   @ViewChild(MatTable, { static: false }) table: MatTable<PlaceholderTableItem>;
-  @ViewChild(ColumnsComponent, { static: false }) arr: ColumnsComponent;
+  //@ViewChild(ColumnsComponent, { static: false }) arr: ColumnsComponent;
   dataSource: PlaceholderTableDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id','project', 'crewmember', 'pending', 'i9', 'gk','pa','ps','au','up','lp','st','sp','ss','at'];
+  displayedColumns = ['id','project', 'crewmember', 'pending','i9','gk','sp','ss','at'];
 
   ngOnInit() {
       this.dataSource = new PlaceholderTableDataSource();
@@ -32,6 +32,6 @@ export class PlaceholderTableComponent implements AfterViewInit, OnInit {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
       this.table.dataSource = this.dataSource;
-      this.displayedColumns = columnsArr();
+     // this.displayedColumns = columnsArr();
   }
 }
